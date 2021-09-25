@@ -10,7 +10,7 @@ const offices = [
 
 export default function RequestForm() {
   return (
-    <div className="min-h-screen bg-gray-800">
+    <div className="min-h-screen bg-gray-800 pb-32">
       <main className="overflow-hidden">
         <div className="bg-gray-800">
           <div className="pt-10 pb-32 lg:pb-40">
@@ -18,7 +18,7 @@ export default function RequestForm() {
               <h1 className="text-4xl font-extrabold tracking-tight text-mauveLight sm:text-5xl lg:text-6xl">
                 Get in touch
               </h1>
-              <p className="mt-6 text-xl text-warm-gray-200 max-w-3xl">
+              <p className="mt-6 text-xl text-warm-gray-200 max-w-2xl">
                 Vel nunc non ut montes, viverra tempor. Proin lectus nibh phasellus morbi non morbi. In elementum urna
                 ut volutpat. Sagittis et vel et fermentum amet consequat.
               </p>
@@ -55,14 +55,14 @@ export default function RequestForm() {
             </svg>
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="relative bg-warm-gray-700 shadow-xl">
+            <div className="relative bg-warm-gray-700 shadow-2xl rounded-xl">
               <h2 id="contact-heading" className="sr-only">
                 Contact us
               </h2>
 
               <div className="grid grid-cols-1 lg:grid-cols-3">
                 {/* Contact information */}
-                <div className="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-teal-500 to-teal-600 sm:px-10 xl:p-12">
+                <div className="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-mauve to-mauveLight sm:px-10 xl:p-12 lg:rounded-l-xl rounded-t-xl">
                   {/* Decorative angle backgrounds */}
                   <div className="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
                     <svg
@@ -160,30 +160,35 @@ export default function RequestForm() {
                       </defs>
                     </svg>
                   </div>
-                  <h3 className="text-lg font-medium text-gray-100">Contact information</h3>
+                  <h3 className="text-lg font-medium text-gray-100">Mix Request Form</h3>
                   <p className="mt-6 text-base text-teal-50 max-w-3xl">
-                    Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor
-                    lacus arcu.
+                    <u>Example:</u><br />
+                    Song Name | Artist | Album<br />
+                    0:00-0:50 (on count 1)<br />
+                    1:13-1:27 (after the word "yeah")<br />
+                    2:52-end<br />
+                    ''&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;''&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;''<br />
+                    ''&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;''&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;''<br />
                   </p>
                   <dl className="mt-8 space-y-6">
                     <dt>
                       <span className="sr-only">Phone number</span>
                     </dt>
                     <dd className="flex text-base text-teal-50">
-                      <PhoneIcon className="flex-shrink-0 w-6 h-6 text-teal-200" aria-hidden="true" />
-                      <span className="ml-3">+1 (555) 123-4567</span>
+                      <PhoneIcon className="flex-shrink-0 w-6 h-6 text-teal-500" aria-hidden="true" />
+                      <span className="ml-3">+1 (801) 602-9168</span>
                     </dd>
                     <dt>
                       <span className="sr-only">Email</span>
                     </dt>
                     <dd className="flex text-base text-teal-50">
-                      <MailIcon className="flex-shrink-0 w-6 h-6 text-teal-200" aria-hidden="true" />
+                      <MailIcon className="flex-shrink-0 w-6 h-6 text-teal-500" aria-hidden="true" />
                       <span className="ml-3">support@workcation.com</span>
                     </dd>
                   </dl>
-                  <ul role="list" className="mt-8 flex space-x-12">
+                  <ul className="mt-8 flex space-x-12">
                     <li>
-                      <a className="text-teal-200 hover:text-teal-100" href="#">
+                      <a className="text-teal-500 hover:text-teal-300" href="#">
                         <span className="sr-only">Facebook</span>
                         <svg className="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                           <path
@@ -195,7 +200,7 @@ export default function RequestForm() {
                       </a>
                     </li>
                     <li>
-                      <a className="text-teal-200 hover:text-teal-100" href="#">
+                      <a className="text-teal-500 hover:text-teal-300" href="#">
                         <span className="sr-only">GitHub</span>
                         <svg className="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                           <path
@@ -207,7 +212,7 @@ export default function RequestForm() {
                       </a>
                     </li>
                     <li>
-                      <a className="text-teal-200 hover:text-teal-100" href="#">
+                      <a className="text-teal-500 hover:text-teal-300" href="#">
                         <span className="sr-only">Twitter</span>
                         <svg className="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
@@ -219,7 +224,7 @@ export default function RequestForm() {
 
                 {/* Contact form */}
                 <div className="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
-                  <h3 className="text-lg font-medium text-warm-gray-100">Send us a message</h3>
+                  <h3 className="text-lg font-medium text-warm-gray-100">Send us a request</h3>
                   <form action="#" method="POST" className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                     <div>
                       <label htmlFor="first-name" className="block text-sm font-medium text-warm-gray-100">
@@ -327,33 +332,6 @@ export default function RequestForm() {
                   </form>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact grid */}
-        <section aria-labelledby="offices-heading">
-          <div className="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-            <h2 id="offices-heading" className="text-3xl font-extrabold text-warm-gray-900">
-              Our offices
-            </h2>
-            <p className="mt-6 text-lg text-warm-gray-500 max-w-3xl">
-              Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus
-              dui laoreet diam sed lacus, fames.
-            </p>
-            <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-              {offices.map((office) => (
-                <div key={office.id}>
-                  <h3 className="text-lg font-medium text-warm-gray-900">{office.city}</h3>
-                  <p className="mt-2 text-base text-warm-gray-500">
-                    {office.address.map((line) => (
-                      <span key={line} className="block">
-                        {line}
-                      </span>
-                    ))}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
