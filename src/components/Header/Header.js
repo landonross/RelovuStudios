@@ -11,7 +11,7 @@ const navigation = [
 
 export default function Header() {
     return (
-        <div className="relative bg-gray-800 overflow-hidden">
+        <div className="relative bg-gray-800 ">
             <div className="relative pt-1 pb-1 ">
                 <Popover>
                     <div className="max-w-7xl mx-auto px-4 sm:p-4">
@@ -65,7 +65,7 @@ export default function Header() {
                     >
                         <Popover.Panel
                             focus
-                            className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                            className="absolute z-20 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
                         >
                             <div className="rounded-lg shadow-md bg-gray-800 ring-1 ring-gray-900 ring-opacity-5 overflow-hidden">
                                 <div className="px-5 pt-4 flex items-center justify-between">
