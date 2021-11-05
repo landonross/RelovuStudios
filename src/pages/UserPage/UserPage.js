@@ -3,22 +3,22 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {
   CalendarIcon,
-//   ChartBarIcon,
+  //   ChartBarIcon,
   FolderIcon,
   HomeIcon,
-//   InboxIcon,
+  //   InboxIcon,
   MenuIcon,
-//   UsersIcon,
+  //   UsersIcon,
   XIcon,
 } from '@heroicons/react/outline'
 
 const navigation = [
   { name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
-//   { name: 'Projects', href: '#', icon: UsersIcon, current: false },
+  //   { name: 'Projects', href: '#', icon: UsersIcon, current: false },
   { name: 'Projects', href: '#', icon: FolderIcon, current: false },
   { name: 'Request Form', href: '#', icon: CalendarIcon, current: false },
-//   { name: 'Documents', href: '#', icon: InboxIcon, current: false },
-//   { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
+  //   { name: 'Documents', href: '#', icon: InboxIcon, current: false },
+  //   { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
 ]
 
 function classNames(...classes) {
@@ -74,11 +74,11 @@ export default function UserPage() {
                   <div className="absolute top-0 right-0 -mr-12 pt-2">
                     <button
                       type="button"
-                      className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                      className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-50"
                       onClick={() => setSidebarOpen(false)}
                     >
                       <span className="sr-only">Close sidebar</span>
-                      <XIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                      <XIcon className="h-6 w-6 text-gray-50" aria-hidden="true" />
                     </button>
                   </div>
                 </Transition.Child>
@@ -115,15 +115,15 @@ export default function UserPage() {
                 <div className="flex-shrink-0 flex bg-gray-700 p-4">
                   <a href="#" className="flex-shrink-0 group block">
                     <div className="flex items-center">
-                      <div>
+                      {/* <div>
                         <img
                           className="inline-block h-10 w-10 rounded-full"
                           src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                           alt=""
                         />
-                      </div>
+                      </div> */}
                       <div className="ml-3">
-                        <p className="text-base font-medium text-gray-50">Tom Cook</p>
+                        <p className="text-base font-medium text-gray-50">User Name</p>
                         <p className="text-sm font-medium text-gray-400 group-hover:text-gray-300">View profile</p>
                       </div>
                     </div>
@@ -180,7 +180,7 @@ export default function UserPage() {
                     />
                   </div> */}
                   <div className="ml-3">
-                    <p className="text-sm font-medium text-gray-200">Tom Cook</p>
+                    <p className="text-sm font-medium text-gray-200">User Name</p>
                     <p className="text-xs font-medium text-gray-300 group-hover:text-gray-200">Edit profile</p>
                   </div>
                 </div>
@@ -189,10 +189,10 @@ export default function UserPage() {
           </div>
         </div>
         <div className="md:pl-64 flex flex-col flex-1">
-          <div className="sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-100">
+          <div className="sticky top-0 z-10 md:hidden pl-1 pt-1 sm:pl-3 sm:pt-3 bg-gray-800">
             <button
               type="button"
-              className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="-ml-0.5 -mt-0.5 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-100 hover:text-rose-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-100"
               onClick={() => setSidebarOpen(true)}
             >
               <span className="sr-only">Open sidebar</span>
