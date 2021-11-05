@@ -105,7 +105,7 @@ export default function Profile() {
         <body class="h-full">
         ```
       */}
-      <div className="min-h-full">
+      <div className="min-h-full bg-warm-gray-300">
        
 
         <main className="py-10">

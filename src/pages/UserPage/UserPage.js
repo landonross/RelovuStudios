@@ -34,14 +34,6 @@ export default function UserPage() {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="fixed inset-0 flex z-40 md:hidden" onClose={setSidebarOpen}>
@@ -142,7 +134,7 @@ export default function UserPage() {
         {/* Static sidebar for desktop */}
         <div className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="flex-1 flex flex-col min-h-0 bg-gray-800">
+          <div className="flex-1 flex flex-col min-h-0 bg-gray-900">
             <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
               {/* <div className="flex items-center flex-shrink-0 px-4">
                 <img
@@ -204,17 +196,12 @@ export default function UserPage() {
             </button>
           </div>
           <main className="flex-1">
-            <div className="py-6">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1> */}
-              </div>
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+              <div className="max-w-7xl mx-auto">
             <Routes>
                   <Route path='/UserPage/Profile' component={Profile} />
                   <Route path='/UserPage/RequestForm' component={RequestForm} />
             </Routes>
               </div>
-            </div>
             <Footer />
           </main>
         </div>

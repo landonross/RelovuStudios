@@ -1,13 +1,6 @@
 import React from 'react';
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline';
 
-const offices = [
-  { id: 1, city: 'Los Angeles', address: ['4556 Brendan Ferry', 'Los Angeles, CA 90210'] },
-  { id: 2, city: 'New York', address: ['886 Walter Streets', 'New York, NY 12345'] },
-  { id: 3, city: 'Toronto', address: ['7363 Cynthia Pass', 'Toronto, ON N3Y 4H8'] },
-  { id: 4, city: 'London', address: ['114 Cobble Lane', 'London N1 2EF'] },
-]
-
 export default function RequestForm() {
   return (
     <div className="min-h-screen bg-gray-800 pb-32">
@@ -188,7 +181,7 @@ export default function RequestForm() {
                   </dl>
                   <ul className="mt-8 flex space-x-12">
                     <li>
-                      <a className="text-teal-500 hover:text-teal-300" href="#">
+                      <a className="text-teal-500 hover:text-teal-300" href=".">
                         <span className="sr-only">Facebook</span>
                         <svg className="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                           <path
@@ -200,7 +193,7 @@ export default function RequestForm() {
                       </a>
                     </li>
                     <li>
-                      <a className="text-teal-500 hover:text-teal-300" href="#">
+                      <a className="text-teal-500 hover:text-teal-300" href=".">
                         <span className="sr-only">GitHub</span>
                         <svg className="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                           <path
@@ -212,7 +205,7 @@ export default function RequestForm() {
                       </a>
                     </li>
                     <li>
-                      <a className="text-teal-500 hover:text-teal-300" href="#">
+                      <a className="text-teal-500 hover:text-teal-300" href=".">
                         <span className="sr-only">Twitter</span>
                         <svg className="w-7 h-7" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
