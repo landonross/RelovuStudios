@@ -11,9 +11,9 @@ function App() {
     <Router>
       {/* <Header /> */}
       <Switch>
-        <Route exact path="/" component={HomePage} />
+        <Route exact path="/UserPage/*" component={UserPage} />
         <Route exact path="/RequestForm" component={RequestForm} />
-        <Route exact path="/UserPage" component={UserPage} />
+        <Route exact path="/" component={HomePage} />
       </Switch>
         {/* <Footer /> */}
     </Router>

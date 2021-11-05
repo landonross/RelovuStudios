@@ -1,16 +1,10 @@
-import { Fragment } from 'react'
-import { Menu, Popover, Transition } from '@headlessui/react'
+import React from 'react';
 import {
-  ArrowNarrowLeftIcon,
   CheckIcon,
-  HomeIcon,
   PaperClipIcon,
-  QuestionMarkCircleIcon,
-  SearchIcon,
   ThumbUpIcon,
   UserIcon,
 } from '@heroicons/react/solid'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const user = {
   name: 'Whitney Francis',
@@ -18,22 +12,6 @@ const user = {
   imageUrl:
     'https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80',
 }
-const navigation = [
-  { name: 'Dashboard', href: '#' },
-  { name: 'Jobs', href: '#' },
-  { name: 'Applicants', href: '#' },
-  { name: 'Company', href: '#' },
-]
-const breadcrumbs = [
-  { name: 'Jobs', href: '#', current: false },
-  { name: 'Front End Developer', href: '#', current: false },
-  { name: 'Applicants', href: '#', current: true },
-]
-const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
-  { name: 'Sign out', href: '#' },
-]
 const attachments = [
   { name: 'resume_front_end_developer.pdf', href: '#' },
   { name: 'coverletter_front_end_developer.pdf', href: '#' },
@@ -211,7 +189,7 @@ export default function Profile() {
                       <div className="sm:col-span-2">
                         <dt className="text-sm font-medium text-gray-500">Project links</dt>
                         <dd className="mt-1 text-sm text-gray-900">
-                          <ul role="list" className="border border-gray-200 rounded-md divide-y divide-gray-200">
+                          <ul className="border border-gray-200 rounded-md divide-y divide-gray-200">
                             {attachments.map((attachment) => (
                               <li
                                 key={attachment.name}
@@ -254,7 +232,7 @@ export default function Profile() {
                       </h2>
                     </div>
                     <div className="px-4 py-6 sm:px-6">
-                      <ul role="list" className="space-y-8">
+                      <ul className="space-y-8">
                         {comments.map((comment) => (
                           <li key={comment.id}>
                             <div className="flex space-x-3">
@@ -267,7 +245,7 @@ export default function Profile() {
                               </div>
                               <div>
                                 <div className="text-sm">
-                                  <a href="#" className="font-medium text-gray-900">
+                                  <a href="." className="font-medium text-gray-900">
                                     {comment.name}
                                   </a>
                                 </div>
@@ -310,7 +288,7 @@ export default function Profile() {
                           </div>
                           <div className="mt-3 flex items-center justify-between">
                             <a
-                              href="#"
+                              href="."
                               className="group inline-flex items-start text-sm space-x-2 text-gray-500 hover:text-gray-900"
                             >
                               {/* <QuestionMarkCircleIcon
@@ -342,7 +320,7 @@ export default function Profile() {
 
                 {/* Activity Feed */}
                 <div className="mt-6 flow-root">
-                  <ul role="list" className="-mb-8">
+                  <ul className="-mb-8">
                     {timeline.map((item, itemIdx) => (
                       <li key={item.id}>
                         <div className="relative pb-8">
@@ -367,7 +345,7 @@ export default function Profile() {
                               <div>
                                 <p className="text-sm text-gray-500">
                                   {item.content}{' '}
-                                  <a href="#" className="font-medium text-gray-900">
+                                  <a href="." className="font-medium text-gray-900">
                                     {item.target}
                                   </a>
                                 </p>
@@ -385,6 +363,10 @@ export default function Profile() {
                 <div className="mt-6 flex flex-col justify-stretch">
                   <button
                     type="button"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href='/RequestForm';
+                        }}
                     className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-gray-50 bg-teal-700 hover:bg-teal-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-600"
                   >
                     Request project

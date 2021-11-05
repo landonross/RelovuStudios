@@ -1,4 +1,5 @@
 // import RequestForm from '../RequestForm/RequestForm';
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {
@@ -8,17 +9,18 @@ import {
   HomeIcon,
   //   InboxIcon,
   MenuIcon,
-  //   UsersIcon,
+  UsersIcon,
   XIcon,
 } from '@heroicons/react/outline'
 import Footer from '../../components/Footer/Footer';
 import Profile from '../Profile/Profile';
+import RequestForm from '../RequestForm/RequestForm';
 
 const navigation = [
-  { name: 'Dashboard', href: '/', icon: HomeIcon, current: true },
-  //   { name: 'Projects', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Request Form', href: '#', icon: CalendarIcon, current: false },
+  { name: 'Dashboard', href: '/', icon: HomeIcon, current: false },
+  { name: 'Profile', href: '/UserPage/Profile', icon: UsersIcon, current: true },
+  { name: 'Projects', href: '/UserProjects', icon: FolderIcon, current: false },
+  { name: 'Request Form', href: '/UserPage/RequestForm', icon: CalendarIcon, current: false },
   //   { name: 'Documents', href: '#', icon: InboxIcon, current: false },
   //   { name: 'Reports', href: '#', icon: ChartBarIcon, current: false },
 ]
@@ -207,7 +209,10 @@ export default function UserPage() {
                 {/* <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1> */}
               </div>
               <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                  <Profile />
+            <Routes>
+                  <Route path='/UserPage/Profile' component={Profile} />
+                  <Route path='/UserPage/RequestForm' component={RequestForm} />
+            </Routes>
               </div>
             </div>
             <Footer />
